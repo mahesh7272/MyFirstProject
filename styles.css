@@ -1,0 +1,79 @@
+/* Reset some default browser styles */
+body,
+h1,
+section,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 20px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+}
+
+section {
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+}
+
+.section-title {
+  background-color: #ff7f50; /* Example color */
+  color: white;
+  padding: 10px;
+  font-size: 125%; /* 25% larger than section content */
+  position: relative;
+}
+
+.section-content {
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Media queries for responsive layout */
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  section {
+    width: 50%;
+    float: left;
+  }
+
+  .section-content {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 125%;
+  }
+
+  section:nth-child(3) {
+    clear: both;
+    width: 100%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  section {
+    width: 100%;
+    float: none;
+  }
+
+  .section-content {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 125%;
+  }
+}
